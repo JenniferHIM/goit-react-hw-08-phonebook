@@ -2,7 +2,7 @@ import { isRejected } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-axios.defaults.baseURL = '';
+axios.defaults.baseURL = 'https://goit-phonebook-api8.herokuapp.com';
 
 // Auth requests
 const token = {
