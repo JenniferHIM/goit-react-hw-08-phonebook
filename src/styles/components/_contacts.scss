@@ -1,0 +1,217 @@
+.myPhonebook {
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: left;
+
+  border-radius: 4px;
+  box-shadow: $main-shadow;
+  background-image: $phonebook-bg-color, url(../../images/mobile-phone.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bigHeader {
+  text-align: center;
+  margin-bottom: 10px;
+  color: $azure-color;
+}
+
+.smallHeader {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: $azure-color;
+}
+
+.subForm {
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border: 1px solid $white-color;
+  border-radius: 5px;
+}
+
+.subFormTitle {
+  font-size: 16px;
+  color: $white-color;
+}
+
+.subFormLabel {
+  display: block;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.subFormLabelTitle {
+  display: inline-block;
+  width: 50px;
+  margin-right: 10px;
+
+  color: $white-color;
+}
+
+.openSubFormBox {
+  @include flex(left);
+}
+
+.arrowBox {
+  margin-left: auto;
+  padding: 10px 0;
+  color: $azure-color;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($color: $azure-bg-color, $alpha: 0.2);
+  }
+}
+
+.subFormInput {
+  width: 100%;
+  height: 35px;
+  padding: 0 10px;
+
+  border: 1px solid $white-color;
+  border-radius: 5px;
+  font-size: 16px;
+  letter-spacing: 0.01rem;
+  outline: none;
+
+  &::placeholder {
+    opacity: 1;
+    @include transition(opacity);
+  }
+
+  &:focus::placeholder {
+    opacity: 0;
+  }
+}
+
+.react-tel-input {
+  & .phoneNumberClass {
+    width: 100%;
+    font: inherit;
+    font-style: normal;
+
+    &::placeholder {
+      opacity: 1;
+      @include transition(opacity);
+    }
+
+    &:focus::placeholder {
+      opacity: 0;
+    }
+  }
+}
+
+.addBtn {
+  display: block;
+  min-width: 100px;
+  padding: 5px;
+
+  border: 1px solid $white-color;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: $light-blue-color;
+  color: $azure-color;
+  outline: none;
+  cursor: pointer;
+
+  @include transition(color, background-color);
+
+  &:hover {
+    background-color: $azure-color;
+    color: $black-color;
+  }
+}
+
+.contacsList {
+  @extend .subForm;
+  min-height: 100px;
+  max-height: 220px;
+  overflow: hidden;
+  overflow-y: scroll;
+  color: $white-color;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $azure-bg-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $light-blue-color;
+    border-radius: 20px;
+    border: 1px solid $azure-bg-color;
+  }
+}
+
+.contactItem {
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 10px;
+  align-items: center;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid $white-color;
+}
+
+.box1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.box2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.box3 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+}
+.box4 {
+  grid-column-start: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+#mdAccount {
+  font-size: 22px;
+}
+
+.contactName {
+  font-weight: 500;
+}
+
+.contactNumber {
+  text-align: right;
+}
+
+.closeBtn {
+  @include flex();
+  margin-left: auto;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  font-size: inherit;
+
+  border-radius: 50%;
+  background-color: transparent;
+  color: $white-color;
+  outline: none;
+  cursor: pointer;
+
+  @include transition(color, background-color);
+
+  &:hover {
+    background-color: white;
+    color: red;
+  }
+}

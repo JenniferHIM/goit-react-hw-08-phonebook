@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: $basic-font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: $code-font;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label,
+span {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  border: none;
+  overflow: hidden;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  min-width: 300px;
+  max-width: $tablet - 1;
+
+  @media screen and (min-width: $tablet) {
+    max-width: $desktop - 1;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: $max-width;
+  }
+}
+
+.App {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 70px;
+  background-image: url('../../images/background-tablet.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: $desktop) {
+    background-image: url('../../images/background-desktop.jpg');
+  }
+}
+
+.viewContainer {
+  display: block;
+  width: 100%;
+  min-height: calc(100vh - 109px);
+  padding: 10px;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    @include flex();
+  }
+}
+
+.footer {
+  @include flex();
+  width: 100%;
+  padding: 10px;
+
+  color: $light-blue-color;
+  background-color: $azure-bg-color;
+  border-top: 1px solid $border-shadow;
+  text-shadow: $main-shadow;
+}
+
+#icon-copyRigths {
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+#icon-heart {
+  margin-left: 10px;
+  color: $accent-color;
+
+  animation-name: beat;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.6);
+  }
+}

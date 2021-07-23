@@ -1,0 +1,61 @@
+.logoSide {
+  padding: 10px;
+  @media screen and (min-width: $tablet) {
+    width: 50%;
+  }
+}
+
+.logoBackground {
+  @include flex();
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  margin: 0 auto;
+
+  border: 1px dotted $accent-color;
+  border-radius: 50%;
+  background-color: $azure-bg-color;
+
+  @media screen and (min-width: $tablet) {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.logo {
+  color: $accent-color;
+}
+
+.logotext {
+  font-size: 20px;
+  font-family: $logo-font;
+  font-style: italic;
+  color: $accent-color;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 30px;
+  }
+}
+
+.sloganSide {
+  padding: 10px;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    width: 50%;
+    text-align: left;
+  }
+}
+
+.mainTitle {
+  margin-bottom: 40px;
+  font-size: 40px;
+  color: $accent-color;
+}
+
+.slogan {
+  margin-bottom: 40px;
+  font-size: 24px;
+  color: $medium-blue-color;
+}
