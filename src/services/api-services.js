@@ -2,7 +2,8 @@ import { isRejected } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-axios.defaults.baseURL = 'https://goit-phonebook-api8.herokuapp.com';
+// axios.defaults.baseURL = 'https://jenns-netlify-hw8.netlify.app';
+axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
 // Auth requests
 const token = {
@@ -87,4 +88,3 @@ export async function deleteContactsRequest(id) {
     return new Promise(isRejected);
   }
 }
-
