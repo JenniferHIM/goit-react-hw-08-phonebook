@@ -13,8 +13,8 @@ const ContactForm = () => {
   const contacts = useSelector(state => phoneSelectors.getContacts(state));
   const dispatch = useDispatch();
 
-  const handleSubmit = e => {
-    e.preventDefault();
+  const handleSubmit = evt => {
+    evt.preventDefault();
 
     if (checkContacts(contacts, contactName)) {
       toast.error(`${contactName} is already in contacts.`);
@@ -60,7 +60,7 @@ const ContactForm = () => {
               className="subFormInput"
               type="text"
               value={contactName}
-              onChange={e => setContactName(e.target.value)}
+              onChange={evt => setContactName(evt.target.value)}
               placeholder="input name"
               autoComplete="off"
               required

@@ -27,8 +27,8 @@ const Filter = () => {
             <input
               className="subFormInput"
               type="text"
-              onChange={e =>
-                dispatch(phoneActions.changeFilter(e.target.value))
+              onChange={evt =>
+                dispatch(phoneActions.changeFilter(evt.target.value))
               }
               value={value}
               name="filter"
